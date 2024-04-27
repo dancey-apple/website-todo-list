@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "console-log-colors": "^0.4.0",
+    "prompts": "^2.4.2"
+  },
+  "name": "website-todo-list",
+  "description": "ToDo List for web. OKCoders Module3 Day6",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo 'We REALLY need test!!'",
+    "start": "browser-sync start --server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dancey-apple/website-todo-list.git"
+  },
+  "keywords": [
+    "ToDo"
+  ],
+  "author": "Dancey Apple <dancey.apple@proton.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dancey-apple/website-todo-list/issues"
+  },
+  "homepage": "https://github.com/dancey-apple/website-todo-list#readme"
+}
