@@ -11,11 +11,12 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #29003a;
+    background: #EF6C57;
+    
 }
 
 .container{
-    background: #00fff2;
+    background: #7ED3B2;
     padding: 25px;
     width: 550px;
     border-radius: 10px;
@@ -27,4 +28,32 @@ body{
     margin-bottom: 20px;
     padding-left: 5px;
     justify-content: center;
+}
+
+.todo-body{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background: #B9E6D3;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.todo-body input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+.todo-body button{
+    background: #EF6C57;
+    cursor: pointer;
+    border-radius: 40px;
+    height: 55px;
+    width: 55px;
+    padding: 15px;
 }
