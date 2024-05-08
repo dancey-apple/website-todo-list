@@ -10,6 +10,7 @@ if (!todo) {
 
 function createToDoItem(){
     let inputValue = checkForEmptyValue();
+    let dupeValue = checkForDuplicate();
     if (!inputValue){
         let li = document.createElement('li');
         const todoItems = `<div title="Hit Double Click and Complete" ondblclick='CompletedToDoItems(this)'>${todoValue.value}</div><div><button class="edit todo-controls" onclick='updateToDoItems(this)'>Edit</button><button class='delete todo-controls' onclick='deleteTodoItems(this)'>Delete</button></div></div>`;
@@ -17,6 +18,7 @@ function createToDoItem(){
         listItems.appendChild(li);
         todoAlert.innerText = "You added a new todo item. Get to work!";
     }
+    console.log(todo);
 }
 function checkForEmptyValue(){
     if (todoValue.value === "" || todoValue.value === null){
@@ -26,4 +28,15 @@ function checkForEmptyValue(){
         return false;
     }
 }
-function checkForDuplicate(){}
+function checkForDuplicate(){
+    todo.forEach((element) => {
+        if (element.item == todoValue.value){
+            todoAlert.innerText = "You already added this item, dude. -_-";
+            return true;
+        }
+    })
+}
+
+function setLocalStorage(){
+    localStorage.setItem('todo-list', JSON.stringify(todo));
+}
