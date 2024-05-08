@@ -9,7 +9,7 @@ if (!todo) {
 }
 
 function createToDoItem(){
-    if (todoValue.value === ""){
+    if (todoValue.value === "" || todoValue.value === null){
         todoAlert.innerText = "Uhm.... you didn't add anything.";
         todoValue.focus();
     }else {
@@ -21,12 +21,12 @@ function createToDoItem(){
         });
         
         if (isPresent){
-            setAlertMessage("You alreay added this item, dude. -_-");
+            todoAlert.innerText = "You alreay added this item, dude. -_-";
             return;
         }
 
         let li = document.createElement('li');
-        const todoItems = `<div title="Hit Double Click and Complete" ondlclik='CompletedToDoItems(this)">${todoValue.value}</div><div><button class="edit todo-controls" onclick='updateToDoItems(this)'>Edit</button><button class='delete todo-controls' onclick='deleteTodoItems(this)'>Delete</button></div></div>`;
+        const todoItems = `<div title="Hit Double Click and Complete" ondblclik='CompletedToDoItems(this)">${todoValue.value}</div><div><button class="edit todo-controls" onclick='updateToDoItems(this)'>Edit</button><button class='delete todo-controls' onclick='deleteTodoItems(this)'>Delete</button></div></div>`;
         li.innerHTML = todoItems;
         listItems.appendChild(li);
 
@@ -38,5 +38,5 @@ function createToDoItem(){
         setLocalStorage();
     }
     todoValue.value = "";
-    setAlertMessage("You added a new todo item. Get to work!");
+    //todoAlert.innerText = "You added a new todo item. Get to work!";
 }
