@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Website Todo List</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <!--This is where the input for adding tasks will go-->
-            <div class="todo-header">
-                <h2>ToDo List</h2>
-            </div>
-            <div class="todo-body">
-                <input type = "text" id = "todoText" placeholder = "Enter a task">
-                <button id="AddUpdateClick" onclick="createToDoItem()">+</button>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container" id="header">
+        <h1>To Do List</h1>
+    </div>
+    <div class="container" id="todo-body">
+        <h2>These are the things I need to get done:</h2>
+        <input type="text" id="todoText" placeholder="Enter a task">
+        <button id="add-item" onclick="createToDoItem()">+</button>
+        <div class="containter" id="alert">
             <h5 id="Alert"></h5>
-            <ul id="list-items" class="list-items"></ul>
         </div>
-    </body>
-    <script type="text/javascript" src="script.js"></script>
+        <div class="container" id="list-items">
+            <ul id="list-items" class="list-items"></ul>
+    </div>
+    <!-- Your content goes here -->
+    
+    <script src="script.js"></script>
+</body>
 </html>
